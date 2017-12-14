@@ -93,4 +93,9 @@ class AndroidAudioDevice implements AudioDevice {
 	public void setVolume (float volume) {
 		track.setStereoVolume(volume, volume);
 	}
+	
+	@Override
+	public void setSpeed (float speed) {
+	    track.setPlaybackRate((int)(track.getSampleRate()*speed));
+	}
 }
