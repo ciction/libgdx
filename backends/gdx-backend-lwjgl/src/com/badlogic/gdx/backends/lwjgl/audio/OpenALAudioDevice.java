@@ -176,6 +176,11 @@ public class OpenALAudioDevice implements AudioDevice {
 		this.volume = volume;
 		if (sourceID != -1) alSourcef(sourceID, AL_GAIN, volume);
 	}
+	
+	@Override
+	public void setSpeed (float speed) {
+	    track.setPlaybackRate((int)(track.getSampleRate()*speed));
+	}
 
 	public float getPosition () {
 		if (sourceID == -1) return 0;
