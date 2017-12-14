@@ -50,4 +50,7 @@ public interface AudioDevice extends Disposable {
 
 	/** Sets the volume in the range [0,1]. */
 	public void setVolume (float volume);
+	
+        /** Sets the sound speed */
+	public void setSpeed(float val);
 }
